@@ -9,12 +9,12 @@ t.geometry("500x300")
 
 # get details
 def get_details():
-    get_title = title.get()
+    get_category = category_value.get()
     get_msg = msg.get()
     get_time = time1.get()
     # print(get_title,get_msg, tt)
 
-    if get_title == "" or get_msg == "" or get_time == "":
+    if get_category == "" or get_msg == "" or get_time == "":
         messagebox.showerror("Alert", "All fields are required!")
     else:
         int_time = int(float(get_time))
@@ -23,22 +23,27 @@ def get_details():
         t.destroy()
         time.sleep(min_to_sec)
 
-        notification.notify(title=get_title,
+        notification.notify(title=get_category,
                             message=get_msg,
                             app_name="Notifier",
-                            app_icon="ico.ico",
+                            app_icon="",
                             toast=True,
                             timeout=10)
 
+# Selection Menu for Category
+category_options = ["Hydration", "Wholesome Motivation"]
 
+# Label - Category
+category_label = Label(t, text="Category",font=("poppins", 10))
+category_label.place(x=12, y=70)
 
-# Label - Title
-t_label = Label(t, text="Title to Notify",font=("poppins", 10))
-t_label.place(x=12, y=70)
-
-# ENTRY - Title
-title = Entry(t, width="25",font=("poppins", 13))
-title.place(x=123, y=70)
+# Option menu - Category
+# variable to keep track of option
+category_value = StringVar(t)
+category_value.set("Select a category of reminders")
+category_menu = OptionMenu(t, category_value, *category_options)
+category_menu.pack()
+category_menu.place(x=123, y=70)
 
 # Label - Message
 m_label = Label(t, text="Display Message", font=("poppins", 10))
