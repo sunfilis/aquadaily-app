@@ -1,7 +1,7 @@
 
 # Aquadaily
 #### Contributors: Filicia, Dhruvi and Keyu 
-Project for McHacks 9
+Project for a hackathon
 
 Aquadaily is an app that sends notification reminders to hydrate yourself or messages to motivate you! People affected by the pandemic are our target audience (potential users). Based on research, hydration is one of the key weapons in the fight against COVID-19. So, we wanted to remind people that it’s extremely important to stay hydrated. Meanwhile, we believe that mental health is another important issue that needs to be addressed. So we are not only reminding people to drink more water, but also sending them positive reminders to make them feel motivated throughout the day. This project was completed at our first hackathon and we're happy we were able to have a working product by the end of it!
 
